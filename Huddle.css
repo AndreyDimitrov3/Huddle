@@ -3,6 +3,9 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-image: url('images/bg-desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,9 +15,11 @@ body{
 }
 
 .main{
-    padding-top: 28px;
-    padding: 28px 5% 0 5%;
     display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: 28px;
+    padding: 0 5%;
     gap: 6%;
 }
 
@@ -70,10 +75,12 @@ body{
 .social{
     display: flex;
     justify-content: flex-end;
+    align-self: flex-end;
     gap: 35px;
     text-decoration: none;
-    margin-top: 20px;
     filter: invert(1);
+    margin-right: 60px;
+    margin-bottom: 20px;
 }
 
 .svg{
@@ -97,13 +104,9 @@ body{
     cursor: pointer;
 }
 
-@media screen and (max-height: 650px) and (min-width: 1024px){
-    .text-svg{
-        margin-bottom: 30px;
-    }
-
-    .illustration{
-        margin-bottom: 20px;
+@media screen and (min-width: 1600px){
+    .main{
+        padding: 0 10%;
     }
 }
 
@@ -130,19 +133,22 @@ body{
     }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px), (max-height: 650px){
     body{
+        height: auto;
         background-image: url('images/bg-mobile.svg');
     }
 
     .main{
         flex-direction: column;
+        gap: 0;
     }
 
     .logo-illustration{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 30px;
     }
 
     .logo{
@@ -151,7 +157,7 @@ body{
 
     .text-holder{
         align-items: center;
-        margin-bottom: 45px;
+        margin-bottom: 25px;
     }
 
     .heading{
@@ -166,7 +172,13 @@ body{
     }
 
     .social{
+        align-self: auto;
         justify-content: center;
+        margin: 0;
+        margin-right: 15px;
+    }
+
+    .circle{
         margin-bottom: 30px;
     }
 }
@@ -174,6 +186,10 @@ body{
 @media screen and (max-width: 620px){
     .illustration{
         max-width: 470px;
+    }
+
+    .social{
+        margin-top: 0px;
     }
 }
 
